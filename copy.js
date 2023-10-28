@@ -24,6 +24,14 @@ class Model {
     cadastrar(nome) {
         this.contatos.push(nome)
     }
+
+    modificar(indice, novoValor) {
+        this.contatos[indice] = novoValor
+    }
+
+    excluir(indice, novoValor) {
+        
+    }
 }
 
 class View {
@@ -106,8 +114,7 @@ class Controller {
     modificar() {
         const indice = view.pedirIndice();
         const novoNome = view.pedirNovoNome();
-        model.cadastrar(indice);
-        model.cadastrar(novoNome);
+        model.modificar(indice, novoNome);
         view.sucesso();
     }
 
